@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Članovi porodice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div class="text">
+          <h3>Unesi Ime</h3>
+          <input type="text" class="name" id="name" placeholder="Unesi ime" autocomplete="off" />
+        </div>
+        <div class="text">
+          <h3>Unesi prezime ispravi ovo</h3>
+          <input
+            type="text"
+            class="lastName"
+            id="lastName"
+            placeholder="Unesi prezime" autocomplete="off"
+          />
+        </div>
+        <div class="text">
+          <h3>Unesi datum rođenja dd</h3>
+          <input type="date" id="datum" />
+        </div>
+        <div>
+          <button onclick="dodajClana()" class="btnn" id="button">
+            Type me
+          </button>
+        </div>
+      </div>
+      <div>
+        <p class="broj">
+          Porodica ima ukupno članova:
+          <span class="badge prikazUkupnoClanova"></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="container tabela">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Datum rođenja</th>
+            <th>starost</th>
+          </tr>
+        </thead>
+        <tbody class="table-tbody"></tbody>
+      </table>
+    </div>
+    <div class="container">
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Heading</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <div>
+                <div class="text">
+                 
+                  <input type="text" class="nameModal" id="nameModal" placeholder="Unesi ime" />
+                </div>
+                <div class="text">
+                  
+                  <input
+                    type="text"
+                    class="lastNameModal"
+                    id="lastNameModal"
+                    placeholder="Unesi prezime"
+                  />
+                </div>
+                <div class="text">
+                  <input type="date" id="datumModal" title="Unesi datum rođenja" />
+                </div>
+                <div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button onclick="promjenaVrijednostiInpute()" type="button" class="btn btn-success" id="spremiPromjene">Success</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <script src="main.js"></script>
+  </body>
+</html>
